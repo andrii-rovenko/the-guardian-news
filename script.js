@@ -1,16 +1,17 @@
 (function(){
-
     var app = angular.module("MainModule", []);
 
     const MainController = function($scope, $http){
 
         const onResponse = function(respond){
             $scope.news = respond.data.response.results;
+            delete $scope.error;
             //console.log($scope.news);
         }
 
         const onError = function(respond){
             $scope.error = "Could not fetch the data";
+            delete $scope.news;
             console.log($scope.error);
         }
 

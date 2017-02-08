@@ -1,0 +1,22 @@
+{
+  "name": "the-guardian-news",
+  "version": "1.0.0",
+  "description": "- [x] Level 1     * Create a web app that shows a list of 10 last news from The Guardian API. - [x] Level 2     * Add refresh button on top of the news list.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrii-rovenko/the-guardian-news.git"
+  },
+  "author": "Andrii Rovenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrii-rovenko/the-guardian-news/issues"
+  },
+  "homepage": "https://github.com/andrii-rovenko/the-guardian-news#readme",
+  "dependencies": {
+    "angular": "^1.6.1"
+  }
+}
