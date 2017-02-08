@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="MainModule" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script data-require="angular.js@1.2.23" data-semver="1.2.23" src="https://code.angularjs.org/1.2.23/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>The Guardian News</title>
+</head>
+<body ng-controller="MainController">
+    <h1>The Guardian News</h1>
+    <button ng-click="click()">Refresh</button>
+    <div class="contentWrapper">
+        <div ng-show="error">
+            <div class="red">
+                Sorry, we couldn't find news for you.
+                Please try again later.
+            </div>
+        </div>
+        <ul>
+            <li ng-repeat="item in news">
+                <div>
+                    {{item.webTitle}}
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
