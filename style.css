@@ -33,3 +33,19 @@ li {
     border-radius: 3px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
+
+li button, li button:focus, li button:active {
+    background:none!important;
+    border:none; 
+    padding:0!important;
+    
+    font-family: sans-serif;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+li div {
+    visibility:none;
+    font-size: 14px;
+    line-height: 1.5em;
+}

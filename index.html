@@ -17,7 +17,8 @@
         </div>
         <ul ng-if="news">
             <li ng-repeat="item in news">
-                    {{item.webTitle}}
+                    <h3 ng-click="show(item.id)">{{item.webTitle}}</h3><hr>
+                    <div>{{item.fullArticle}}</div>
             </li>
         </ul>
     </div>
