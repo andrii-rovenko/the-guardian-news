@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" />
-    <script data-require="angular.js@1.2.23" data-semver="1.2.23" src="https://code.angularjs.org/1.2.23/angular.js"></script>
+    <script src="https://code.angularjs.org/1.2.23/angular.js"></script>
     <script src="script.js"></script>
     <title>The Guardian News</title>
 </head>
@@ -11,11 +11,11 @@
     <h1>The Guardian News</h1>
     <button ng-click="click()">Refresh</button>
     <div class="contentWrapper">
-        <div class="red" ng-show="error">
+        <div class="red" ng-if="error">
                 Sorry, we couldn't find news for you.
                 Please try again later.
         </div>
-        <ul>
+        <ul ng-if="news">
             <li ng-repeat="item in news">
                     {{item.webTitle}}
             </li>
