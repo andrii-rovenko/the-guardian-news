@@ -13,6 +13,27 @@ h3 {
     top: 0;
 }
 
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #333;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+form {
+    font-size: 1.2em;
+}
+
+input {
+    width: 50px;
+    background-color: white;
+    color: black;
+    border: 2px solid #333;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
 .contentWrapper {
 
     min-width: 400px;
@@ -81,16 +102,32 @@ li {
         font-size: 14px;
         line-height: 1.5em;
         color: #333;
-        height: 200px;
+        min-height: 20px;
+        max-height: 200px;
         overflow: auto;
-        text-overflow: ellipsis;
     }
 
         li.show .article{
             display: block;
-
         }
 
         li.hide .article{
             display: none;
         }
+
+.paginationBox {
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+    .previousPageButton {
+        width: 150px;
+        float: left;
+    }
+    .nextPageButton {
+        width: 150px;
+        float: right;
+    }
+    .indicator {
+        width: 230px;
+        margin: 0 auto;
+    }

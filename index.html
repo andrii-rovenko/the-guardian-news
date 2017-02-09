@@ -36,6 +36,17 @@
                     </div>
             </li>
         </ul>
+
+        <div class="paginationBox">
+            <button class="previousPageButton" ng-click="previousPage()">Previous Page</button>
+            <button class="nextPageButton" ng-click="nextPage()">Next Page</button>
+            <div class="indicator">
+                <form ng-submit="submit(currentPage)">
+                    <input type="input" ng-model="currentPage">
+                    of {{pagesCount}} pages
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

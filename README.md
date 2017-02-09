@@ -18,3 +18,4 @@ Todo:
 - [ ] Make smooth animation
 - [x] Change icon
 - [x] Decrease length of article
+- [x] If full article is short, block size is small too

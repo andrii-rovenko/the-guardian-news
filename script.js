@@ -5,17 +5,51 @@
 
         $scope.click = function(){
             console.log("button is pressed");
-            refresh();
+
+            refresh($scope.currentPage);
         }
 
-        const refresh = function(){
-            $http.get("http://content.guardianapis.com/search?api-key=test")
+        $scope.submit = function(value){
+            console.log("submitted " + value);
+            refresh(value);
+        }
+
+        $scope.nextPage = function(){
+            if ($scope.currentPage < $scope.pagesCount){
+                $scope.currentPage++;
+                refresh($scope.currentPage);
+            }
+        }
+
+        $scope.previousPage = function(){
+            if ($scope.currentPage > 1){
+                $scope.currentPage--;
+                refresh($scope.currentPage);
+            }
+        }
+
+        const refresh = function(page){
+            console.log();
+            const searchLink = "http://content.guardianapis.com/search?";
+            //let pageNumber = 1;
+            const apiKey = "api-key=test";
+            let link;
+
+            const createLink = function(page){
+                link = searchLink  + "page=" + page + "&" + apiKey;
+            }
+            
+            if ($scope.currentPage){
+                createLink($scope.currentPage)
+            } else {
+                createLink(page);
+            }
+            $http.get(link)
                 .then(onResponse, onError);
         }
 
         const onResponse = function(respond){
-            $scope.news = respond.data.response.results;
-            $scope.news = $scope.news.map(el => {
+            $scope.news = respond.data.response.results.map(el => {
                $http.get(el.apiUrl + "?show-blocks=body&api-key=test")
                 .then(respond => {
                     el.fullArticle = respond.data.response.content.blocks.body[0].bodyTextSummary;
@@ -25,7 +59,8 @@
                 return el;
             });
             delete $scope.error;
-            //console.log($scope.news[0]);
+            $scope.pagesCount = respond.data.response.pages;
+            $scope.currentPage = respond.data.response.currentPage;
         }
 
         const onError = function(respond){
@@ -46,7 +81,7 @@
             console.log($scope.news);
         }
 
-        refresh();
+        refresh(1);
 
     }
 
