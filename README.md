@@ -4,8 +4,10 @@
     * Create a web app that shows a list of 10 last news from The Guardian API.
 - [x] Level 2
     * Add refresh button on top of the news list.
-- [ ] Level 3
+- [x] Level 3
     * Add "accordion" with a short text of the news and a link to the article.
+- [x] Level 4
+    * Add pagination block.
 
 ##Notes
 

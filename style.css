@@ -4,8 +4,10 @@ body {
 }
 
 h1 {
+    font-size: 3em;
     font-family: serif;
     text-align: center;
+    letter-spacing: 0.3em;
 }
 
 h3 {
@@ -17,8 +19,10 @@ button {
     background-color: white;
     color: black;
     border: 2px solid #333;
+    border-radius: 3px;
     padding: 10px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 form {
@@ -42,7 +46,6 @@ input {
 }
 
 .toolbar {
-    background-color: darkslategray;
     width: 100px;
     margin: 0 auto;
 }
