@@ -37,12 +37,10 @@
         $scope.show = function(id){
             $scope.news = $scope.news.map(el => {
                 if (el.id === id) {
-                    el.display = true;
-                    //console.log(el);
+                        el.display = !el.display;
                 } else {
                     el.display = false;
                 }
-                //console.log(el);
                 return el;
             });
             console.log($scope.news);

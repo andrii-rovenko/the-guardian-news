@@ -16,5 +16,5 @@ Todo:
 - [x] Make title clickable, pass element identifyer to function ng-click
 - [x] Change div.visibility to true, all other - to false
 - [ ] Make smooth animation
-- [ ] Change icon
-- [ ] Decrease length of article
+- [x] Change icon
+- [x] Decrease length of article
