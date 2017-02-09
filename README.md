@@ -12,6 +12,9 @@
 Not everything works fine, but full articles are loading and displaying.
 Todo:
 - [x] Place it to separate div
-- [ ] Make div.visibility:none
+- [x] Make div.visibility:none
 - [x] Make title clickable, pass element identifyer to function ng-click
-- [ ] Change div.visibility to true, all other - to false
+- [x] Change div.visibility to true, all other - to false
+- [ ] Make smooth animation
+- [ ] Change icon
+- [ ] Decrease length of article

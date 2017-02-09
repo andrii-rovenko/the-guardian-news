@@ -25,7 +25,7 @@
                 return el;
             });
             delete $scope.error;
-            console.log($scope.news[0]);
+            //console.log($scope.news[0]);
         }
 
         const onError = function(respond){
@@ -35,7 +35,17 @@
         }
 
         $scope.show = function(id){
-            console.log(id);
+            $scope.news = $scope.news.map(el => {
+                if (el.id === id) {
+                    el.display = true;
+                    //console.log(el);
+                } else {
+                    el.display = false;
+                }
+                //console.log(el);
+                return el;
+            });
+            console.log($scope.news);
         }
 
         refresh();

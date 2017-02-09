@@ -8,11 +8,26 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    position: relative;
+    top: 0;
+}
+
 .contentWrapper {
 
     min-width: 400px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.toolbar {
+    background-color: darkslategray;
+    width: 100px;
+    margin: 0 auto;
+}
+
+button {
+    width: 100px;
 }
 
 .red {
@@ -32,20 +47,50 @@ li {
     background-color: #eee;
     border-radius: 3px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    transition: 300ms;
 }
 
-li button, li button:focus, li button:active {
-    background:none!important;
-    border:none; 
-    padding:0!important;
-    
-    font-family: sans-serif;
-    font-size: 20px;
-    cursor:pointer;
-}
 
-li div {
-    visibility:none;
-    font-size: 14px;
-    line-height: 1.5em;
-}
+    li .title {
+        cursor: pointer;
+        height: 70px;
+    }
+
+        li .title .text {
+            float: left;
+            width: calc(100% - 53px);
+        }
+
+        li .title .icon {
+            float: left;
+            margin: 10px 0 0 0;
+            width: 53px;
+            height: 31px;
+        }
+
+            li.show .title .icon {
+            background: url('icon.svg') 0 31px; 
+            }
+
+            li.hide .title .icon {
+                background: url('icon.svg') 0 0;
+            }
+
+    li .article {
+        clear: left;
+        font-size: 14px;
+        line-height: 1.5em;
+        color: #333;
+        height: 200px;
+        overflow: auto;
+        text-overflow: ellipsis;
+    }
+
+        li.show .article{
+            display: block;
+
+        }
+
+        li.hide .article{
+            display: none;
+        }

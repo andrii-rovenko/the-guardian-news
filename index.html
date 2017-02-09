@@ -9,16 +9,31 @@
 </head>
 <body ng-controller="MainController">
     <h1>The Guardian News</h1>
-    <button ng-click="click()">Refresh</button>
+    
     <div class="contentWrapper">
+        <div class="toolbar">
+            <button ng-click="click()">Refresh</button>
+        </div>
         <div class="red" ng-if="error">
                 Sorry, we couldn't find news for you.
                 Please try again later.
         </div>
         <ul ng-if="news">
-            <li ng-repeat="item in news">
-                    <h3 ng-click="show(item.id)">{{item.webTitle}}</h3><hr>
-                    <div>{{item.fullArticle}}</div>
+            <li ng-repeat="item in news" ng-class="{
+                show: item.display,
+                hide: !item.display
+            }">
+                    <div class="title" ng-click="show(item.id)">
+                        <div class="text">
+                            <h3>{{item.webTitle}}</h3>
+                        </div>
+                        <div class="icon"></div>
+                    </div>
+                    
+                    <div class="article">
+                        
+                        {{item.fullArticle}}
+                    </div>
             </li>
         </ul>
     </div>
